@@ -12,7 +12,7 @@ class GameScreen():
 
     def def_level(self, index):
         self.blocks = []
-        self.game = Nonograma(1)
+        self.game = Nonograma()
         self.game.load_level(index)
         self.n = len(self.game.sol_board)
         blocks_size = int(500 / self.n)
