@@ -13,10 +13,10 @@ class Nonograma:
         return self.player_board
 
     def set_sol(self, m_sol):
-        return
+        self.sol_board = m_sol
 
     def set_player(self, save):
-        return
+        self.player_board = save
 
     def win_condition(self):
         return
