@@ -42,8 +42,7 @@ class TestNon(unittest.TestCase):
         self.assertEqual(self.game.player_board[0][0], 0)
 
     def test_load_level(self):
-        self.game.sol_board = self.test_board
-        self.assertEqual(self.game.sol_board, self.game.load_level(self.test_board))
+        self.assertEqual(self.game.load_level(1), self.game.sol_board)
 
 
 if __name__ == '__main__':
