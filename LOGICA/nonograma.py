@@ -28,6 +28,9 @@ class Nonograma:
     def empty_box(self, i, j):
         self.player_board[i][j] = 0
 
+    def wipe(self):
+        self.player_board = None
+
     def load_level(self, id_matriz):
         archivo_maestro = ResourceManager.level_path('index.txt')
         with open(archivo_maestro, 'r') as f:
