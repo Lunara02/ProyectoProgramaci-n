@@ -22,12 +22,8 @@ class GenNum:
         return num
 
     def create_num(self):
-        for i in range (len(self.matriz)):
-            self.num_filas.append(self.get_num(self.matriz[i]))
-        columnas = []
+        for fila in self.matriz:
+            self.num_filas.append(self.get_num(fila))
         for j in range(self.n):
-            for i in range(self.n):
-                columnas.append(self.matriz[i][j])
-            self.num_columnas.append(self.get_num(columnas))
-            columnas = []
-
+            columna = [self.matriz[i][j] for i in range(self.n)]
+            self.num_columnas.append(self.get_num(columna))
