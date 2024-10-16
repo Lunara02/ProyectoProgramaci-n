@@ -1,5 +1,6 @@
 import numpy as np
-
+import os
+from .resource_manager import ResourceManager
 
 class Nonograma:
     def __init__(self, n):
@@ -27,5 +28,16 @@ class Nonograma:
     def empty_box(self, i, j):
         self.player_board[i][j] = 0
 
-    def load_level(self, level):
-        return
+    def load_level(self, id_matriz):
+        archivo_maestro = ResourceManager.level_path('index.txt')
+        with open(archivo_maestro, 'r') as f:
+            lineas = f.readlines()
+
+        carpeta_base = os.path.dirname(archivo_maestro)
+        for linea in lineas:
+            id_actual, archivo_matriz = linea.split()
+            if int(id_actual) == id_matriz:
+                ruta_archivo_matriz = os.path.join(carpeta_base, archivo_matriz)
+                self.sol_board = np.loadtxt(ruta_archivo_matriz, dtype=int)
+                return
+
