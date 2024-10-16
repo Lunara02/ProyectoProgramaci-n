@@ -20,10 +20,12 @@ class Nonograma:
 
     def win_condition(self):
         return np.array_equal(self.player_board, self.sol_board)
+
     def fill_box(self, i, j):
-        return
+        self.player_board[i][j] = 1
+
     def empty_box(self, i, j):
-        return
+        self.player_board[i][j] = 0
 
     def load_level(self, level):
         return
