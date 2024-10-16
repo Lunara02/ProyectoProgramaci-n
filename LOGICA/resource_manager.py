@@ -20,7 +20,10 @@ class ResourceManager:
             print(f"No se pudo cargar la imagen {file_name}: {e}")
             return None
 
-    def sound_load(self):
-        None
-    def music_load(self):
-        None
+    @staticmethod
+    def sound_load(file_name):
+        get_sound_path = os.path.join(ResourceManager.resources_folder, file_name)
+        try:
+            return pygame.mixer.Sound(get_sound_path)
+        except pygame.error as e:
+            print(f"No se pudo cargar el sonido {file_name}: {e}")
