@@ -11,3 +11,9 @@ class Button:
 
     def draw(self, surface):
         surface.blit(self.image, self.rect.topleft)
+
+    def click_event(self, events):
+        if mouse_event.left_click(events):
+            if self.rect.collidepoint(pygame.mouse.get_pos()):
+                return True
+        return False
