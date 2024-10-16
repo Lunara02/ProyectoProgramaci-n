@@ -3,7 +3,6 @@ from LOGICA.num_matriz import GenNum
 
 
 class TestNumMatriz(unittest.TestCase):
-    def setUp(self):
 
     def test_get_num(self):
         self.genNum = GenNum([])
