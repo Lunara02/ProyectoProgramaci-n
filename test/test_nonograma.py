@@ -42,7 +42,20 @@ class TestNon(unittest.TestCase):
         self.assertEqual(self.game.player_board[0][0], 0)
 
     def test_load_level(self):
-        self.assertEqual(self.game.load_level(1), self.game.sol_board)
+        self.game.load_level(1)
+        self.test_board = [
+                            [0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
+                            [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+                            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                            [0, 1, 1, 0, 1, 1, 0, 1, 1, 0],
+                            [0, 1, 1, 0, 1, 1, 0, 1, 1, 0],
+                            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                            [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+                            [1, 1, 1, 1, 0, 0, 1, 1, 1, 1],
+                            [1, 1, 0, 1, 0, 0, 1, 0, 1, 1],
+                            [1, 0, 0, 1, 1, 1, 1, 0, 0, 1]
+                        ]
+        self.assertTrue(np.array_equal(self.test_board, self.game.sol_board))
 
 
 if __name__ == '__main__':
