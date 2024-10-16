@@ -3,9 +3,9 @@ import os
 from .resource_manager import ResourceManager
 
 class Nonograma:
-    def __init__(self, n):
-        self.player_board = np.zeros((n, n), dtype=int)
-        self.sol_board = np.zeros((n, n), dtype=int)
+    def __init__(self):
+        self.player_board = None
+        self.sol_board = None
 
     def get_sol(self):
         return self.sol_board
