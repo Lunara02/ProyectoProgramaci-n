@@ -13,3 +13,8 @@ class MainMenu():
         title = self.title_font.render("Menu Principal", True, Color.BLANCO)
         surface.blit(title, (100, 100))
         self.diff_button.draw(surface)
+
+    def handle_events(self, events):
+        if self.diff_button.click_event(events):
+            return 'difficulty'
+        return None
