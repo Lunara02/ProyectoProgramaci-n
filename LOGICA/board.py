@@ -2,7 +2,8 @@ import numpy as np
 
 class Board:
     def __init__(self,n):
-
+        self.n = n
+        self.board = np.zeros((n,n), dtype = int)
     def fill_bloc(self, i, j):
 
     def remove_block(self, i,j):
