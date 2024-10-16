@@ -15,3 +15,4 @@ class Board:
         self.board.fill(0)
 
     def print_board(self):
+        print(self.board)
