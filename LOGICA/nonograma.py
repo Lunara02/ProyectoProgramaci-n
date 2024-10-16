@@ -19,7 +19,7 @@ class Nonograma:
         self.player_board = save
 
     def win_condition(self):
-        return
+        return np.array_equal(self.player_board, self.sol_board)
 
     def load_level(self, level):
         return
