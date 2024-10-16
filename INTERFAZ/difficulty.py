@@ -15,3 +15,8 @@ class Difficult():
         title = self.title_font.render("Dificultad", True, Color.BLANCO)
         surface.blit(title, (100, 100))
         self.level_button.draw(surface)
+
+    def handle_events(self, events):
+        if self.level_button.click_event(events):
+            return 'levels'
+        return None
