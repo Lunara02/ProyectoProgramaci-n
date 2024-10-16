@@ -21,7 +21,6 @@ def main():
                 running = False
 
         screen_manager.handle_events(events)
-        screen_manager.update()
         screen_manager.draw(screen)
         pygame.display.flip()
 
