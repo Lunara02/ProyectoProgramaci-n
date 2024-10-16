@@ -6,14 +6,17 @@ class GenNum:
         self.num_columnas = []
 
     def get_num(self, fila_columna):
-        numeros = []
+        num = []
         contador = 0
-        for numero in fila_columna:
-            if numero==1:
+        for valor in fila_columna:
+            if valor == 1:
                 contador += 1
             elif contador > 0:
-                numeros.append(contador)
+                num.append(contador)
                 contador = 0
         if contador > 0:
-            numeros.append(contador)
-        return numeros
+            num.append(contador)
+
+        if len(num) == 0:
+            num.append(0)
+        return num
