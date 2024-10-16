@@ -8,3 +8,6 @@ class Button:
         self.rect = image.get_rect()
         self.rect.topleft = (x, y)
         self.pressed = False
+
+    def draw(self, surface):
+        surface.blit(self.image, self.rect.topleft)
