@@ -1,4 +1,0 @@
-1 matriz_1.txt
-2 matriz_2.txt
-3 matriz_3.txt
-4 

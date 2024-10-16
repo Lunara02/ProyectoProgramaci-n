@@ -12,9 +12,8 @@ class GameScreen():
 
     def def_level(self, index):
         self.blocks = []
-        self.game = Nonograma()
+        self.game = Nonograma(1)
         self.game.load_level(index)
-        self.game.set_player_board()
         self.n = len(self.game.sol_board)
         blocks_size = int(500 / self.n)
         for i in range(len(self.game.sol_board)):
@@ -34,10 +33,8 @@ class GameScreen():
             for j in range(self.n):
                 if self.blocks[i * self.n + j].handle_event(events) == 1:
                     self.game.fill_box(i, j)
-                    print(self.game.player_board.board)
                 if self.blocks[i * self.n + j].handle_event(events) == 0:
                     self.game.empty_box(i, j)
-                    print(self.game.player_board.board)
 
         if self.game.win_condition():
             self.blocks = None
