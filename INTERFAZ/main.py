@@ -1,11 +1,11 @@
 import pygame
 from screen_manager import ScreenManager
-from LOGICA.gestor_recursos import GestorRecursos
+from LOGICA.resource_manager import ResourceManager
 
 
 def main():
     pygame.init()
-    imagen1 = GestorRecursos.image_load('insano.png')
+    imagen1 = ResourceManager.image_load('insano.png')
     pygame.display.set_icon(imagen1)
     screen_size = (1280, 720)
     screen = pygame.display.set_mode(screen_size, pygame.RESIZABLE)

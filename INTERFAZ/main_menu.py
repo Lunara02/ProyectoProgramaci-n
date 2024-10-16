@@ -1,12 +1,12 @@
 import pygame
 from button import Button
-from LOGICA.gestor_recursos import GestorRecursos
+from LOGICA.resource_manager import ResourceManager
 import Color
 
 class MainMenu():
     def __init__(self):
         self.title_font = pygame.font.Font(None, 74)
-        self.diff_button = Button(300, 300, GestorRecursos.image_load('icon.png'))
+        self.diff_button = Button(300, 300, ResourceManager.image_load('icon.png'))
 
     def draw(self, surface):
         surface.fill(Color.AZUL)

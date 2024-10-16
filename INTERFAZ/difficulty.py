@@ -1,6 +1,6 @@
 import pygame
 
-from LOGICA.gestor_recursos import GestorRecursos
+from LOGICA.resource_manager import ResourceManager
 from button import Button
 import Color
 
@@ -8,7 +8,7 @@ import Color
 class Difficult():
     def __init__(self):
         self.title_font = pygame.font.Font(None, 74)
-        self.level_button = Button(300, 300, GestorRecursos.image_load('icon.png'))
+        self.level_button = Button(300, 300, ResourceManager.image_load('icon.png'))
 
     def draw(self, surface):
         surface.fill((0, 100, 100))
