@@ -7,12 +7,12 @@ class Nonograma:
         self.sol_board = np.zeros((n, n), dtype=int)
 
     def get_sol(self):
-        return
+        return self.sol_board
 
     def get_player(self):
-        return
+        return self.player_board
 
-    def set_sol(self):
+    def set_sol(self, m_sol):
         return
 
     def set_player(self, save):
