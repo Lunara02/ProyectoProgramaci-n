@@ -23,3 +23,6 @@ class ScreenManager:
                 self.current_screen = next_screen.lower()
             else:
                 self.current_screen = result.lower()
+
+    def draw(self, surface):
+        self.screens[self.current_screen].draw(surface)
