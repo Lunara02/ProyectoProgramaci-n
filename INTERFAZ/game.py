@@ -28,3 +28,18 @@ class GameScreen():
                 self.blocks[i * self.n + j].draw(surface)
 
         pygame.display.flip()
+
+    def handle_events(self, events):
+        for i in range(self.n):
+            for j in range(self.n):
+                if self.blocks[i * self.n + j].handle_event(events) == 1:
+                    self.game.fill_box(i, j)
+                    print(self.game.player_board.board)
+                if self.blocks[i * self.n + j].handle_event(events) == 0:
+                    self.game.empty_box(i, j)
+                    print(self.game.player_board.board)
+
+        if self.game.win_condition():
+            self.blocks = None
+            self.game.wipe()
+            return 'levels'
