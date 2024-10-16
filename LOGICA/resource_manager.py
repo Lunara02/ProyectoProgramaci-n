@@ -27,3 +27,11 @@ class ResourceManager:
             return pygame.mixer.Sound(get_sound_path)
         except pygame.error as e:
             print(f"No se pudo cargar el sonido {file_name}: {e}")
+
+    @staticmethod
+    def music_load(file_name):
+        get_music_path = os.path.join(ResourceManager.resources_folder, file_name)
+        try:
+            return pygame.mixer.music.load(get_music_path)
+        except pygame.error as e:
+            print(f"No se pudo cargar la musica {file_name}: {e}")
