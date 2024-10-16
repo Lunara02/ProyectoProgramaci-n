@@ -21,3 +21,9 @@ class Levels():
 
         for button in self.list_levels:
             button.draw(surface)
+
+    def handle_events(self, events):
+        for index, button in enumerate(self.list_levels, start=1):
+            if button.click_event(events):
+                return 'game', index
+        return None
