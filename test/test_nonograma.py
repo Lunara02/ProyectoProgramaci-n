@@ -35,11 +35,11 @@ class TestNon(unittest.TestCase):
 
     def test_fill_box(self):
         self.game.fill_box(1, 1)
-        self.assertTrue(self.game.player_board[1][1] == 1)
+        self.assertEqual(self.game.player_board[1][1], 1)
 
     def test_empty_box(self):
         self.game.empty_box(0, 0)
-        self.assertTrue(self.game.player_board[0][0] == 0)
+        self.assertEqual(self.game.player_board[0][0], 0)
 
     def test_load_level(self):
         self.game.sol_board = self.test_board
