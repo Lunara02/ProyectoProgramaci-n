@@ -16,10 +16,10 @@ class TestNon(unittest.TestCase):
         ])
 
     def test_get_sol(self):
-        self.assertEqual(self.game.get_sol(), self.game.sol_board)
+        self.assertTrue(np.array_equal(self.game.get_sol(), self.game.sol_board))
 
     def test_get_player(self):
-        self.assertEqual(self.game.get_player(), self.game.player_board)
+        self.assertTrue(np.array_equal(self.game.get_player(), self.game.player_board))
 
     def test_set_sol(self):
         self.game.set_sol(self.test_board)
