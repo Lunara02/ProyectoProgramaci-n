@@ -6,7 +6,7 @@ from ProyectoProgramacion.LOGICA.nonograma import Nonograma
 class TestNon(unittest.TestCase):
 
     def setUp(self):
-        self.game = Nonograma(5)
+        self.game = Nonograma()
         self.test_board = np.array([
             [1, 0, 1, 0, 1],
             [0, 1, 0, 1, 0],
@@ -34,10 +34,12 @@ class TestNon(unittest.TestCase):
         self.assertEqual(self.game.win_condition(), True)
 
     def test_fill_box(self):
+        self.game.player_board = self.test_board
         self.game.fill_box(1, 1)
         self.assertEqual(self.game.player_board[1][1], 1)
 
     def test_empty_box(self):
+        self.game.player_board = self.test_board
         self.game.empty_box(0, 0)
         self.assertEqual(self.game.player_board[0][0], 0)
 
