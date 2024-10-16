@@ -42,6 +42,6 @@ class Nonograma:
             if int(id_actual) == id_matriz:
                 ruta_archivo_matriz = os.path.join(carpeta_base, archivo_matriz)
                 self.sol_board = np.loadtxt(ruta_archivo_matriz, dtype=int)
-                self.player_board = np.zeros((len(self.sol_board), len(self.sol_board)), dtype=int)
+                self.player_board = np.zeros(self.sol_board.shape, dtype=int)
                 return
 
