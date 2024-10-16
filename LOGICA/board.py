@@ -12,5 +12,6 @@ class Board:
         self.board[i][j] = 0
 
     def reset(self):
+        self.board.fill(0)
 
     def print_board(self):
