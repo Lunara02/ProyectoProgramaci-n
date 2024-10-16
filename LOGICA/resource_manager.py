@@ -6,8 +6,10 @@ class ResourceManager:
 
     resources_folder = os.path.join(os.path.dirname(proyect_folder), 'resources')
     levels_folder = os.path.join(os.path.dirname(proyect_folder), 'levels')
-    def level_path(self):
-        None
+
+    @staticmethod
+    def level_path(file_name):
+        return os.path.join(ResourceManager.levels_folder, file_name)
     def image_load(self):
         None
     def sound_load(self):
