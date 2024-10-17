@@ -45,6 +45,7 @@ class Nonograma:
                 ruta_archivo_matriz = os.path.join(carpeta_base, archivo_matriz)
                 self.sol_board = np.loadtxt(ruta_archivo_matriz, dtype=int)
                 self.sol_matriz = GenNum(self.sol_board)
+                self.sol_matriz.create_num()
                 self.player_board = np.zeros(self.sol_board.shape, dtype=int)
                 return
 
