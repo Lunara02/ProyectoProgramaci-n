@@ -3,6 +3,7 @@ import os
 from .num_matriz import GenNum
 from .resource_manager import ResourceManager
 
+
 class Nonograma:
     def __init__(self):
         self.player_board = None
@@ -22,7 +23,11 @@ class Nonograma:
         self.player_board = save
 
     def win_condition(self):
-        return np.array_equal(self.player_board, self.sol_board)
+        mask = np.where(self.player_board == 2, 0, self.player_board)
+        return np.array_equal(mask, self.sol_board)
+
+    def block_box(self, i, j):
+        self.player_board[i][j] = 2
 
     def fill_box(self, i, j):
         self.player_board[i][j] = 1
@@ -48,4 +53,3 @@ class Nonograma:
                 self.sol_matriz.create_num()
                 self.player_board = np.zeros(self.sol_board.shape, dtype=int)
                 return
-
