@@ -23,7 +23,7 @@ class GenNum:
 
     def create_num(self):
         for fila in self.matriz:
-            self.num_filas.append(self.get_num(fila))
+            self.num_filas.append(self.get_num(fila)[::-1])
         for j in range(self.n):
             columna = [self.matriz[i][j] for i in range(self.n)]
-            self.num_columnas.append(self.get_num(columna))
+            self.num_columnas.append(self.get_num(columna)[::-1])
