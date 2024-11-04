@@ -1,4 +1,3 @@
-from Xlib.Xcursorfont import mouse
 
 from INTERFAZ.resource_manager import ResourceManager
 from LOGICA.nonograma import Nonograma

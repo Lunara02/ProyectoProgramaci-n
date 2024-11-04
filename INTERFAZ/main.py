@@ -9,7 +9,7 @@ def main():
     pygame.display.set_icon(imagen1)
     screen_size = (1280, 720)
     screen = pygame.display.set_mode(screen_size, pygame.RESIZABLE)
-    pygame.display.set_caption("Main menu")
+    pygame.display.set_caption("SuperNonograma")
     screen_manager = ScreenManager()
     running = True
     while running:
