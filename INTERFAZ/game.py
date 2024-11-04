@@ -1,3 +1,4 @@
+from Xlib.Xcursorfont import mouse
 
 from INTERFAZ.resource_manager import ResourceManager
 from LOGICA.nonograma import Nonograma
@@ -16,7 +17,7 @@ class GameScreen():
         self.num_filas = None
         self.num_columnas = None
         self.blocks_size = None
-        self.mouse_action = 0
+        self.mouse_action = -1
         self.index = None
         self.pause_menu = PauseMenu(500, 170, self.nonograma)
         self.win = ResourceManager.sound_load('win.wav')
@@ -94,16 +95,19 @@ class GameScreen():
                                 self.mouse_action = 0
                             else:
                                 self.mouse_action = 2
-                        if input_event.left_hold():
+                        if input_event.left_hold() and not self.mouse_action == -1:
                             self.nonograma.set_box_value(i, j, self.mouse_action)
                             self.blocks[i * self.n + j].state_change(self.nonograma.player_board[i][j])
-                        if input_event.right_hold():
+                        elif input_event.right_hold() and not self.mouse_action == -1:
                             self.nonograma.set_box_value(i, j, self.mouse_action)
                             self.blocks[i * self.n + j].state_change(self.nonograma.player_board[i][j])
+                        else:
+                            self.mouse_action = -1
                     else:
                         if self.blocks[i * self.n + j].state == 3:
                             self.blocks[i * self.n + j].state = 0
         else:
+            self.mouse_action = -1
             result = self.pause_menu.handle_events(events, self.index)
             if result:
                 self.pause_menu.state = 0
