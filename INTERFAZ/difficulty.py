@@ -1,6 +1,6 @@
 import pygame
 
-from LOGICA.resource_manager import ResourceManager
+from resource_manager import ResourceManager
 from button import Button
 import Color
 
