@@ -21,6 +21,7 @@ class GameScreen():
         self.index = None
         self.pause_menu = PauseMenu(500, 170, self.nonograma)
         self.win = ResourceManager.sound_load('win.wav')
+        self.pause_button = Button(1190,10, ResourceManager.image_load('pause_button.png'))
 
     def def_level(self, index):
         self.blocks = []
@@ -59,6 +60,8 @@ class GameScreen():
                     surface.blit(text_surface, (int((654 + (self.blocks_size - 1) * j - int(self.blocks_size * self.n / 2 - 1 * (self.n - 1))) * xprop), int(330 - 20 * col - int(self.blocks_size * self.n/2 - 1 * (self.n - 1))) * yprop))
                 self.blocks[i * self.n + j].draw(surface)
 
+        self.pause_button.draw(surface)
+
         if self.pause_menu.state == 1:
             self.pause_menu.draw(surface)
 
@@ -77,6 +80,9 @@ class GameScreen():
             return 'levels'
 
         if input_event.esc_press(events):
+            self.pause_menu.set_state()
+
+        if self.pause_button.click_event(events) and self.pause_menu.state == 0:
             self.pause_menu.set_state()
 
         if self.pause_menu.state == 0:

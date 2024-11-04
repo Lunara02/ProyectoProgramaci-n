@@ -10,10 +10,10 @@ class PauseMenu:
         self.y = y
         self.nonograma = nonograma
         self.state = 0
-        self.resume_Button = Button(500, 200, ResourceManager.image_load('icon.png'))
-        self.back_levels_menu_Button = Button(500, 400, ResourceManager.image_load('icon.png'))
-        self.save_level = Button(500, 300, ResourceManager.image_load('icon.png'))
-        self.exit_The_Game_Button = Button(500, 500, ResourceManager.image_load('icon.png'))
+        self.resume_Button = Button(515, 200, ResourceManager.image_load('resume_button.png'))
+        self.back_levels_menu_Button = Button(515, 400, ResourceManager.image_load('return_levels_button.png'))
+        self.save_level = Button(515, 300, ResourceManager.image_load('save_button.png'))
+        self.exit_The_Game_Button = Button(581, 500, ResourceManager.image_load('exit_button.png'))
         self.background_surface = pygame.Surface((1280, 720), pygame.SRCALPHA)
         self.background_surface.fill((0, 0, 0, 128))
 

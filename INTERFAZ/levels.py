@@ -9,7 +9,8 @@ import input_event
 class Levels():
     def __init__(self):
         self.title_font = pygame.font.Font(None, 74)
-        button_image = ResourceManager.image_load('bot.png')
+        self.level_font = pygame.font.Font(None, 60)
+        button_image = ResourceManager.image_load('level_button.png')
         self.level_1 = Button(100, 200, button_image)
         self.level_2 = Button(250, 200, button_image)
         self.level_3 = Button(400, 200, button_image)
@@ -22,7 +23,7 @@ class Levels():
         self.level_10 = Button(1000, 400, button_image)
         self.list_levels = [self.level_1, self.level_2, self.level_3, self.level_4, self.level_5,
                             self.level_6]
-        self.exit = Button(980, 640, ResourceManager.image_load('icon.png'))
+        self.exit = Button(1190, 640, ResourceManager.image_load('back_button.png'))
 
     def draw(self, surface):
         surface.fill((Color.BLANCO))
@@ -30,8 +31,12 @@ class Levels():
         title_rect = title.get_rect(center=(surface.get_width() // 2, 100))
         surface.blit(title, title_rect.topleft)
         self.exit.draw(surface)
-        for button in self.list_levels:
+        for index, button in enumerate(self.list_levels):
             button.draw(surface)
+            level = self.level_font.render(f"{index+1}", True, Color.NEGRO)
+            level_rect = level.get_rect()
+            level_rect.center = (index*150 + 128/2 + 100, 200 + 128/2)
+            surface.blit(level,level_rect)
 
     def handle_events(self, events):
         for index, button in enumerate(self.list_levels, start=1):
