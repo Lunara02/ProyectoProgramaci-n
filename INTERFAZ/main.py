@@ -5,6 +5,7 @@ from INTERFAZ.resource_manager import ResourceManager
 
 def main():
     pygame.init()
+    pygame.mixer.init()
     imagen1 = ResourceManager.image_load('insano.png')
     pygame.display.set_icon(imagen1)
     screen_size = (1280, 720)

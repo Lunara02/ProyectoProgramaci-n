@@ -19,6 +19,7 @@ class GameScreen():
         self.mouse_action = 0
         self.index = None
         self.pause_menu = PauseMenu(500, 170, self.nonograma)
+        self.win = ResourceManager.sound_load('win.wav')
 
     def def_level(self, index):
         self.blocks = []
@@ -63,36 +64,48 @@ class GameScreen():
         pygame.display.flip()
 
     def handle_events(self, events):
+        if self.nonograma.win_condition():
+            self.blocks = None
+            self.nonograma.wipe()
+            self.win.play()
+            while True:
+                # Check if the sound is still playing
+                if not pygame.mixer.get_busy():
+                    break
+            self.nonograma.wipe_saved(self.index)
+            return 'levels'
+
         if input_event.esc_press(events):
             self.pause_menu.set_state()
 
         if self.pause_menu.state == 0:
             for i in range(self.n):
                 for j in range(self.n):
-                    if input_event.left_click(events) and self.blocks[i * self.n + j].collide():
-                        if self.nonograma.player_board[i][j] == 1:
-                            self.mouse_action = 0
-                        else:
-                            self.mouse_action = 1
-                    if input_event.right_click(events) and self.blocks[i * self.n + j].collide():
-                        if self.nonograma.player_board[i][j] == 2:
-                            self.mouse_action = 0
-                        else:
-                            self.mouse_action = 2
-                    if input_event.left_hold() and self.blocks[i * self.n + j].collide():
-                        self.nonograma.set_box_value(i, j, self.mouse_action)
-                        self.blocks[i * self.n + j].state_change(self.nonograma.player_board[i][j])
-                    if input_event.right_hold() and self.blocks[i * self.n + j].collide():
-                        self.nonograma.set_box_value(i, j, self.mouse_action)
-                        self.blocks[i * self.n + j].state_change(self.nonograma.player_board[i][j])
+                    if self.blocks[i * self.n + j].collide():
+                        if self.blocks[i * self.n + j].state == 0:
+                                self.blocks[i * self.n + j].state = 3
+                        if input_event.left_click(events):
+                            if self.nonograma.player_board[i][j] == 1:
+                                self.mouse_action = 0
+                            else:
+                                self.mouse_action = 1
+                        if input_event.right_click(events):
+                            if self.nonograma.player_board[i][j] == 2:
+                                self.mouse_action = 0
+                            else:
+                                self.mouse_action = 2
+                        if input_event.left_hold():
+                            self.nonograma.set_box_value(i, j, self.mouse_action)
+                            self.blocks[i * self.n + j].state_change(self.nonograma.player_board[i][j])
+                        if input_event.right_hold():
+                            self.nonograma.set_box_value(i, j, self.mouse_action)
+                            self.blocks[i * self.n + j].state_change(self.nonograma.player_board[i][j])
+                    else:
+                        if self.blocks[i * self.n + j].state == 3:
+                            self.blocks[i * self.n + j].state = 0
         else:
             result = self.pause_menu.handle_events(events, self.index)
             if result:
                 self.pause_menu.state = 0
                 return result
 
-        if self.nonograma.win_condition():
-            self.blocks = None
-            self.nonograma.wipe()
-            self.nonograma.wipe_saved(self.index)
-            return 'levels'

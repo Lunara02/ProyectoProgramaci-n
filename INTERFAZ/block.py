@@ -36,3 +36,5 @@ class Block:
         if self.state == 2:
             pygame.draw.rect(surface, Color.BLANCO, self.face)
             surface.blit(pygame.transform.scale(self.lock, (int(self.face_size * xprop), int(self.face_size * yprop))), (int((self.x + 1) * xprop), int((self.y + 1) * yprop)))
+        if self.state == 3:
+            pygame.draw.rect(surface, Color.GRIS_CLARO, self.face)
