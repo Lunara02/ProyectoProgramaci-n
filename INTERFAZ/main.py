@@ -1,6 +1,6 @@
 import pygame
 from screen_manager import ScreenManager
-from LOGICA.resource_manager import ResourceManager
+from INTERFAZ.resource_manager import ResourceManager
 
 
 def main():

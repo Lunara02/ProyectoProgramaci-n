@@ -1,6 +1,6 @@
 import pygame
 from button import Button
-from LOGICA.resource_manager import ResourceManager
+from INTERFAZ.resource_manager import ResourceManager
 import Color
 
 class MainMenu():
@@ -16,5 +16,5 @@ class MainMenu():
 
     def handle_events(self, events):
         if self.diff_button.click_event(events):
-            return 'difficulty'
+            return 'levels'
         return None
