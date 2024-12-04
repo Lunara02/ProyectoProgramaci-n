@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/En%20python-%F0%9F%90%8D-a45ce0" alt="En python" />
 </div>
 
-<p style="margin-top: 20px; font-size: 1.2em;">Para ejecutar el proyecto Super Nonograma, sigue los siguientes pasos:</p>
+<h2 style="margin-top: 40px; font-size: 1.5em;">🛠️ Ejecución</h2>
 
 <ol style="text-align: left; font-size: 1em;">
     <li>Asegúrate de tener Python instalado en tu sistema.</li>
@@ -25,5 +25,23 @@
         </li>
     </ul>
 </ol>
+
+<h2 style="margin-top: 40px; font-size: 1.5em;">❓ Preguntas Frecuentes</h2>
+
+<div style="text-align: left; font-size: 1em;">
+    <h3>1. ¿Qué hacer si hay problemas con la fuente de letra?</h3>
+    <p>Si experimentas problemas con la fuente predeterminada, asegúrate de tener instalada la fuente <strong>Comic Sans MS</strong> en tu sistema. Si no está disponible, puedes instalarla siguiendo estos pasos:</p>
+    <ol>
+        <li>Obtén la fuente <strong>Comic Sans MS</strong> que esta en la carpeta raiz del juego</li>
+        <li>Mueve la fuente al siguiente directorio dependiendo de tu sistema operativo:
+            <ul>
+                <li>En inglés: <code>C:\Users\"nombre_usuario"</code></li>
+                <li>En español: <code>C:\Usuarios\"nombre_usuario"</code></li>
+            </ul>
+        </li>
+        <li>Reinicia el programa para que los cambios surtan efecto.</li>
+    </ol>
+    <p>Si el problema persiste, asegúrate de que tu sistema reconozca la fuente instalada revisando las configuraciones de tipografía.</p>
+</div>
 
 </div>
