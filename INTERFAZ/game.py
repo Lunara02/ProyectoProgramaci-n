@@ -64,7 +64,6 @@ class GameScreen():
             for j in range(len(self.nonograma.sol_board)):
                 self.blocks.append(Block(j, i, self.blocks_size))
                 self.blocks[i * self.n + j].state = self.nonograma.player_board[i][j]
-        print(self.num_filas)
 
     def draw_load(self, surface):
         if self.nonograma.Shop.is_item_purchased("New Wallpaper"):

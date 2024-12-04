@@ -8,7 +8,7 @@ class Fade:
         self.screen = screen
         self.fade_speed = fade_speed
         self.fade_surface = pygame.Surface(self.screen.get_size())
-        self.fade_surface.fill((0, 0, 0))  # Color de la transición, negro por defecto
+        self.fade_surface.fill((0, 0, 0))
         self.alpha = 0
 
     def fade_out(self):

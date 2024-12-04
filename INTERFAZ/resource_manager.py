@@ -32,15 +32,12 @@ class ResourceManager:
     def music_load(file_name):
         get_music_path = os.path.join(ResourceManager.resources_folder, file_name)
         try:
-
             pygame.mixer.music.load(get_music_path)
             pygame.mixer.music.set_volume(0.2)
             pygame.mixer.music.play(-1)
-            print(f"Música {file_name} cargada y reproducida.")
         except pygame.error as e:
             print(f"No se pudo cargar la musica {file_name}: {e}")
 
     @staticmethod
     def stop_music():
         pygame.mixer.music.stop()
-        print("Música detenida.")

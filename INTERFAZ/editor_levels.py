@@ -38,7 +38,6 @@ class MyLevels():
 
     def draw(self, surface):
         surface.blit(self.image, (0,0))
-        # mylevels
         self.exit.draw(surface)
         for i in range(self.filas):
             for j in range(abs(7 - (7 + self.niveles % 7) * (math.ceil((self.niveles % 7) / 7)) * (math.floor((i + 1) / self.filas)))):

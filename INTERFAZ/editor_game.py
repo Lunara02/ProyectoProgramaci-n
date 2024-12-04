@@ -43,8 +43,6 @@ class GameEditor():
         self.blocks_size = int(400 / self.n)
         for i in range(self.n):
             for j in range(self.n):
-                print(f'i={i}, j={j}')
-                print(self.nonograma_creator.player_board[i][j])
                 self.blocks.append(Block(j, i, self.blocks_size))
                 self.blocks[i * self.n + j].state = self.nonograma_creator.player_board[i][j]
     def draw_load(self, surface):
