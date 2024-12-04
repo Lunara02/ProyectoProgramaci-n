@@ -3,3 +3,180 @@ BLANCO = (255, 255, 255)
 ROJO = (255, 0, 0)
 VERDE = (0, 255, 0)
 AZUL = (0, 0, 255)
+GRIS = (80, 80, 80)
+GRIS_CLARO = (230, 230, 230)
+ROJO_PASTEL = (255, 79, 79)
+# Amarillos
+AMARILLO = (255, 255, 0)
+AMARILLO_OSCURO = (204, 204, 0)
+AMARILLO_CLARO = (255, 255, 153)
+
+# Naranjas
+NARANJA = (255, 165, 0)
+NARANJA_OSCURO = (255, 140, 0)
+NARANJA_CLARO = (255, 200, 102)
+
+# Verdes
+VERDE_OSCURO = (0, 128, 0)
+VERDE_CLARO = (144, 238, 144)
+VERDE_AZULADO = (0, 255, 127)
+
+# Azules
+AZUL_OSCURO = (0, 0, 139)
+AZUL_CLARO = (135, 206, 250)
+AZUL_TURQUESA = (64, 224, 208)
+
+# Morados
+MORADO = (128, 0, 128)
+LILA = (200, 162, 200)
+MORADO_CLARO = (238, 130, 238)
+
+# Rosas
+ROSA = (255, 105, 180)
+ROSA_CLARO = (255, 182, 193)
+ROSA_OSCURO = (255, 20, 147)
+
+# Marrones
+MARRON = (139, 69, 19)
+MARRON_OSCURO = (101, 67, 33)
+BEIGE = (245, 245, 220)
+
+# Colores pasteles
+LILA_PASTEL = (230, 230, 250)
+PEACH_PASTEL = (255, 218, 185)
+AZUL_PASTEL = (174, 198, 207)
+
+# Colores metálicos
+PLATA = (192, 192, 192)
+ORO = (255, 215, 0)
+BRONCE = (205, 127, 50)
+
+# Otros colores
+FUXIA = (255, 0, 255)
+TURQUESA = (0, 206, 209)
+CYAN = (0, 255, 255)
+
+# Colores adicionales
+ROJO_OSCURO = (139, 0, 0)
+ROJO_CLARO = (255, 99, 71)
+ROJO_CARMESÍ = (220, 20, 60)
+
+# Colores en tonos tierra
+SAND = (194, 178, 128)
+TERRACOTA = (226, 114, 91)
+OLIVA = (128, 128, 0)
+OLIVA_OSCURO = (85, 107, 47)
+
+# Colores claros
+BEIGE_CLARO = (255, 239, 191)
+CREMA = (255, 253, 208)
+ALMOND = (239, 202, 168)
+
+# Colores azules adicionales
+CIELO = (135, 206, 235)
+AZUL_NAVY = (0, 0, 128)
+AZUL_MARINO = (0, 0, 205)
+AZUL_ROYAL = (65, 105, 225)
+
+# Colores verdes adicionales
+VERDE_PASTEL = (119, 221, 119)
+VERDE_ESMERALDA = (80, 200, 120)
+VERDE_HIERBA = (124, 252, 0)
+
+# Colores morados adicionales
+PÚRPURA = (128, 0, 128)
+MORADO_ANTIQUO = (102, 51, 153)
+MORADO_OSCURO = (75, 0, 130)
+
+# Colores de la naturaleza
+CIELO_ALBA = (255, 223, 186)
+MADERA = (139, 87, 66)
+HIERBA = (34, 139, 34)
+
+# Colores cálidos
+ROJO_AMPOLLA = (255, 72, 0)
+AMARILLO_MOSTAZA = (255, 219, 88)
+ORO_OSCURO = (204, 204, 0)
+
+# Colores fríos
+AZUL_SOMBRÍO = (0, 0, 128)
+AZUL_VERDE = (0, 255, 255)
+PLATA_CLARO = (216, 221, 221)
+
+# Colores metálicos
+CINABRIO = (227, 11, 92)
+PLATINO = (229, 228, 226)
+
+# Colores neón
+NEON_VERDE = (57, 255, 20)
+NEON_ROJO = (255, 59, 48)
+NEON_AMARILLO = (204, 255, 0)
+
+# Colores oscuros adicionales
+NEGRO_FOSFORESCENTE = (0, 0, 0)
+GRIS_OSCURO = (169, 169, 169)
+GRIS_PLOMO = (105, 105, 105)
+
+# Colores cálidos y suaves
+TERRACOTA_OSCURO = (158, 75, 30)
+NARANJA_RUSTICO = (234, 122, 43)
+CARAMELITO = (192, 140, 75)
+
+# Colores adicionales
+SALMON = (250, 128, 114)
+SALMON_OSCURO = (233, 78, 36)
+ROSA_BABY = (255, 182, 193)
+ROSA_TIJERA = (255, 51, 204)
+
+# Colores cálidos
+TOMATE = (255, 99, 71)
+LAVA = (255, 53, 53)
+CORAL = (255, 127, 80)
+
+# Colores amarillos y anaranjados
+AMARILLO_LIMA = (204, 255, 0)
+AMARILLO_BANANA = (255, 225, 53)
+NARANJA_TURBIO = (255, 94, 77)
+
+# Colores morados y lilas
+MORADO_PALIDO = (221, 160, 221)
+LILA_VIOLETA = (148, 0, 211)
+LILA_SUAVE = (230, 230, 250)
+LAVANDA = (230, 230, 250)
+
+# Colores naturales
+CAFE = (139, 69, 19)
+PESCADO = (85, 107, 47)
+LECHOSA = (253, 94, 83)
+
+# Azules y aquas adicionales
+AZUL_CIELO_PASTEL = (135, 206, 250)
+AZUL_CIELO = (135, 206, 235)
+AZUL_AGUA = (0, 255, 255)
+AZUL_TURQUESA_CLARO = (72, 209, 204)
+
+# Colores brillantes y neón
+NEON_ROSA = (255, 20, 147)
+NEON_VIOLETA = (177, 56, 255)
+NEON_AMARILLO_CLARO = (255, 255, 102)
+NEON_VERDE_CLARO = (57, 255, 20)
+
+# Colores metálicos y grisáceos
+GRIS_METALICO = (169, 169, 169)
+CHROME = (144, 144, 144)
+ALUMINIO = (211, 211, 211)
+
+# Colores oscuros y profundos
+MARRON_OSCURO = (101, 67, 33)
+PURPLE_OSCURO = (48, 25, 52)
+AZUL_DIFUSO = (0, 0, 139)
+
+# Colores neutros
+PERLA = (236, 236, 236)
+GRAFITO = (105, 105, 105)
+PIEDRA = (188, 184, 138)
+
+# Otros colores
+GRIS_CALIDO = (179, 160, 117)
+CARAMELO = (255, 192, 128)
+PEACH = (255, 218, 185)
