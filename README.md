@@ -10,6 +10,35 @@
     <img src="https://img.shields.io/badge/En%20python-%F0%9F%90%8D-a45ce0" alt="En python" />
 </div>
 
+<h2 style="margin-top: 40px; font-size: 1.5em;">⚙️ Funcionalidades</h2>
+
+<div style="text-align: left; font-size: 1em;">
+    <ul>
+        <li><strong>Interacción con el tablero:</strong> 
+            <ul>
+                <li><strong>Clic izquierdo:</strong> Pinta una casilla.</li>
+                <li><strong>Clic derecho:</strong> Marca una casilla.</li>
+                <li><strong>Shift + Clic izquierdo:</strong> Mueve el tablero mientras haces zoom.</li>
+            </ul>
+        </li>
+        <li><strong>Tienda:</strong>
+            <p>La tienda permite comprar diferentes elementos que mejoran la experiencia del juego, tales como:</p>
+            <ul>
+                <li>Nueva música.</li>
+                <li>Nuevos fondos.</li>
+                <li>Efectos de sonido.</li>
+                <li>Acceso al creador.</li>
+            </ul>
+        </li>
+        <li><strong>Creador de niveles:</strong> 
+            <p>Permite crear tus propios niveles personalizados y guardarlos para jugarlos más tarde.</p>
+        </li>
+        <li><strong>Monedas:</strong> 
+            <p>Las monedas se pueden ganar completando niveles. Se utilizan en la tienda para comprar música, fondos, sonidos y más.</p>
+        </li>
+    </ul>
+</div>
+
 <h2 style="margin-top: 40px; font-size: 1.5em;">🛠️ Ejecución</h2>
 
 <ol style="text-align: left; font-size: 1em;">
@@ -29,7 +58,7 @@
 <h2 style="margin-top: 40px; font-size: 1.5em;">❓ Preguntas Frecuentes</h2>
 
 <div style="text-align: left; font-size: 1em;">
-    <h3>1. ¿Qué hacer si hay problemas con la fuente de letra?</h3>
+    <h3> ¿Qué hacer si hay problemas con la fuente de letra?</h3>
     <p>Si experimentas problemas con la fuente predeterminada, asegúrate de tener instalada la fuente <strong>Comic Sans MS</strong> en tu sistema. Si no está disponible, puedes instalarla siguiendo estos pasos:</p>
     <ol>
         <li>Obtén la fuente <strong>Comic Sans MS</strong> que esta en la carpeta raiz del juego</li>
