@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/Orientado%20a%20Objeto-%F0%9F%98%8E-60d8e8" alt="Orientado a Objeto" />
     <img src="https://img.shields.io/badge/En%20python-%F0%9F%90%8D-a45ce0" alt="En python" />
 </div>
-
+  
 <h2 style="margin-top: 40px; font-size: 1.5em;">⚙️ Funcionalidades</h2>
 
 <div style="text-align: left; font-size: 1em;">
