@@ -19,6 +19,7 @@
                 <li><strong>Clic izquierdo:</strong> Pinta una casilla.</li>
                 <li><strong>Clic derecho:</strong> Marca una casilla.</li>
                 <li><strong>Shift + Clic izquierdo:</strong> Mueve el tablero mientras haces zoom.</li>
+                <li><strong>Presionar R:</strong> Restea la posición de la matriz.</li>
             </ul>
         </li>
         <li><strong>Tienda:</strong>
