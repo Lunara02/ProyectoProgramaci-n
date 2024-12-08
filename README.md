@@ -2,8 +2,6 @@
 
 # ⭐ Super Nonograma 🚀 ⭐
 
-<img src="https://github.com/user-attachments/assets/6df42562-f7cd-48d4-979d-909bae98a71a" alt="Super Nonograma" />
-
 <div style="margin: 20px 0;">
     <img src="https://img.shields.io/badge/Es%20el%20SuperNonograma-%F0%9F%92%AF-6fea6b" alt="Es el SuperNonograma" />
     <img src="https://img.shields.io/badge/Orientado%20a%20Objeto-%F0%9F%98%8E-60d8e8" alt="Orientado a Objeto" />
